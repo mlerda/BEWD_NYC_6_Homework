@@ -1,0 +1,15 @@
+final_project
+
+PROBLEM
+There is an information gap for foreign companies that are publicly traded in US exchanges. Due to their lassification as ADRs (American Depository Receipt), these companies are not obligated to report or publish some of the financial filings required by their local regulators and vice versa.
+
+TARGET AUDIENCE
+Finance professionals that invest in companies traded in US exchanges but based in Latin America.
+
+DESCRIPTION OF FUNCTIONALITY
+At first the goal is to aggregate US and local filings in one place. For example, the user can log on to the site, search for an entity, and in one page find the most recent US and local market filings. In addition, the site will alert the user any time there is a new filing published. 
+
+My ultimate goal would be to be able to pull some key numbers (SEC EDGAR lets you pull numbers) and be able to play with this data. Ex. screen for valuation multiples, or be alerted if the company hits certain finacial ratios. 
+
+RESOURCES
+SEC EDGAR (which appears to have an API that uses XBRL format); Comision Nacional de Valores(cnv.gob.ar – local securities regulator in Argentina). The CNV does not appear to have an API and I might have to scrape the site for filings (will need help figuring out best way to approach this). 
