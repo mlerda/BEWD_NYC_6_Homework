@@ -1,0 +1,37 @@
+<h1>Listing paintings</h1>
+
+<%= form_tag "/paintings", method: :get do %>
+	<%= text_field_tag :query %>
+	<%= submit_tag "Search" %>
+<% end %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Artist</th>
+      <th>Museum</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @paintings.each do |painting| %>
+      <tr>
+        <td><%= painting.name %></td>
+        <td><%= painting.artist %></td>
+        <td><%= painting.museum %></td>
+        <td><%= link_to 'Show', painting %></td>
+        <td><%= link_to 'Edit', edit_painting_path(painting) %></td>
+        <td><%= link_to 'Destroy', painting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Painting', new_painting_path %>
