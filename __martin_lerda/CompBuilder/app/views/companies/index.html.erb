@@ -1,0 +1,15 @@
+<h1>Input Ticker to Build a Comparables Table</h1>
+
+<%= form_tag "/companies", method: :get do %>
+	<%= text_field_tag :query %>
+	<%= submit_tag "Search" %>
+<% end %>
+
+<% @companies.each do |company| %>
+	<p>
+		Name: <%= company.name %><br />
+		Ticker: <%= company.ticker %><br />
+		Sic: <%= company.sic %><br />	
+	</p>
+<% end %>	
+
